@@ -1,0 +1,51 @@
+<h1> Lütfen users.csv'i seçin</h1>
+<input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadListener($event)" accept=".csv" />
+<h2> Lütfen pace.csv'i seçin </h2>
+<input type="file" #csvReader2 name="Upload CSV" id="txtFileUpload2" (change)="uploadListener2($event)" accept=".csv" />
+
+<table class="minimalistBlack" *ngIf="records.length > 0">
+  <thead>
+    <tr>
+      <th>User İd </th>
+      <th>User Name </th>
+      <th>Age </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of records;let i = index;">
+      <td> <span>{{record.userid}}</span> </td>
+      <td> <span>{{record.username}}</span> </td>
+      <td> <span>{{record.age}}</span> </td>
+    </tr>
+  </tbody>
+</table>
+<table class="minimalistBlack" *ngIf="records2.length > 0">
+  <thead>
+  <tr>
+    <th>User İd </th>
+    <th>total time </th>
+    <th>distance </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let record of records2;let i = index;">
+    <td> <span>{{record.userid}}</span> </td>
+    <td> <span>{{record.total_time}}</span> </td>
+    <td> <span>{{record.distance}}</span> </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<table class="minimalistBlack" *ngIf="userNames.length > 0">
+  <thead>
+  <tr>
+    <th>Runner Leaderboard</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let record of userNames;let i = index;">
+    <td> <span>{{record}}</span> </td>
+  </tr>
+  </tbody>
+</table>
