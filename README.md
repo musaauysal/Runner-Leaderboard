@@ -1,4 +1,13 @@
 # RunnerLeaderbord
+-Install NodeJS
+NodeJS Download / Installation Process ======>https://nodejs.org/en/download/
+_____________________________________________________________________________
+-Install Angular
+npm install -g @angular/cli
+_____________________________________________________________________________
+
+The users.csv and pace.csv files are in the Runner-Leaderboard \ src \ assets folder
+____________________________________________________________________________________
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
